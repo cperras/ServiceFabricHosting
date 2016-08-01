@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92B52479-171E-48CF-AA76-EC014F2DF30B}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LaputanDesigns.ServiceFabricHosting", "src\LaputanDesigns.ServiceFabricHosting\LaputanDesigns.ServiceFabricHosting.xproj", "{094AD678-7152-4DAF-8D38-E3D9DF119735}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F57A16B-2D37-4220-BAAB-6EC97FCD3529}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{24052D0A-D4CE-412A-B6FC-2B3766CDFFDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EchoApp", "EchoApp", "{FDDEAC10-A8EA-43F6-9339-EAE5E3A88C01}"
+EndProject
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "EchoApp", "samples\EchoApp2\EchoApp\EchoApp.sfproj", "{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Debug|x64.Build.0 = Debug|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Release|x64.ActiveCfg = Release|Any CPU
+		{094AD678-7152-4DAF-8D38-E3D9DF119735}.Release|x64.Build.0 = Release|Any CPU
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Debug|x64.ActiveCfg = Debug|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Debug|x64.Build.0 = Debug|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Debug|x64.Deploy.0 = Debug|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Release|Any CPU.ActiveCfg = Release|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Release|x64.ActiveCfg = Release|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Release|x64.Build.0 = Release|x64
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{094AD678-7152-4DAF-8D38-E3D9DF119735} = {92B52479-171E-48CF-AA76-EC014F2DF30B}
+		{FDDEAC10-A8EA-43F6-9339-EAE5E3A88C01} = {24052D0A-D4CE-412A-B6FC-2B3766CDFFDA}
+		{C017C4D5-3EDA-4E08-8F05-F7BA7BA32816} = {FDDEAC10-A8EA-43F6-9339-EAE5E3A88C01}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest Name="EchoGatewayPkg"
+                 Version="1.0.0"
+                 xmlns="http://schemas.microsoft.com/2011/01/fabric"
+                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ServiceTypes>
+    <!-- This is the name of your ServiceType. 
+         This name must match the string used in RegisterServiceType call in Program.cs. -->
+    
+    <!-- cdp: SF does not seem to support multiple service types within a single service... ?? -->
+    
+    <StatelessServiceType ServiceTypeName="EchoGatewayType" >
+      <!--
+      <PlacementConstraints>NodeType == NodeType1 || NodeType == NodeType2</PlacementConstraints>
+    -->
+    </StatelessServiceType>
+   
+  </ServiceTypes>
+
+  <!-- Code package is your service executable. -->
+  <CodePackage Name="Code" Version="1.0.0">
+    <!--
+    <SetupEntryPoint>
+      <ExeHost>
+        <Program>EchoGatewaySetup.bat</Program>
+        <Arguments></Arguments>
+        <WorkingFolder>CodeBase</WorkingFolder>
+        <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
+      </ExeHost>
+    </SetupEntryPoint>
+    -->
+    
+    <EntryPoint>
+      <ExeHost>
+        <Program>EchoGateway.exe</Program>
+        <WorkingFolder>CodePackage</WorkingFolder>
+        <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048"/>
+      </ExeHost>
+    </EntryPoint>
+  </CodePackage>
+
+  <!-- Config package is the contents of the Config directoy under PackageRoot that contains an 
+       independently-updateable and versioned set of custom configuration settings for your service. -->
+  <ConfigPackage Name="Config" Version="1.0.0" />
+
+  <Resources>
+    <Endpoints>
+      <!-- This endpoint is used by the communication listener to obtain the port on which to 
+           listen. Please note that if your service is partitioned, this port is shared with 
+           replicas of different partitions that are placed in your code. -->
+      
+      <!-- in practice, should only have https (not http) -->
+      <Endpoint Protocol="http" Name="HttpEndpoint" Type="Input" Port="8708" />
+
+      <!--
+      <Endpoint Protocol="https" Name="HttpsEndpoint" Type="Input" Port="8709" />
+      -->
+      
+    </Endpoints>
+  </Resources>
+</ServiceManifest>
